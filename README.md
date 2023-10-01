@@ -65,6 +65,17 @@ Run docker-compose command to shutdown all services stack.
 docker-compose down
 ```
 
+## Customize your compose project name 
+edit .env file and change COMPOSE_PROJECT_NAME=**your project name**
+```env
+# .env
+
+# https://docs.docker.com/compose/reference/envvars/#compose_project_name
+# Explicitly set volume's prefix or use -P with a docker run command.
+COMPOSE_PROJECT_NAME=nginx-phpfpm
+
+```
+
 ## How to list docker process
 Run docker command to list all service runing.
 ```bash
