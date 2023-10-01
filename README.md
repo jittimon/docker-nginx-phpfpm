@@ -16,13 +16,14 @@ change working directory
 cd docker-nginx-phpfpm
 ```
 
+Your can put you PHP/web content into "src" directory.
 ```bash
 docker-nginx-phpfpm ‹main*›$ tree
 .
 ├── default.conf
 ├── docker-compose.yml
 ├── README.md
-└── src
+└── src #<<< put php file or you web content under here
     ├── index.php
     └── sqlsrv.php
 ```
