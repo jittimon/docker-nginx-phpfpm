@@ -1,6 +1,6 @@
 # Docker PHP-FPM 7.4,8.* and Nginx
 
-# How to use this repo
+## How to use this repo
 
 Clone this repo
 ```bash
@@ -28,7 +28,7 @@ docker-nginx-phpfpm ‹main*›$ tree
 ```
 
 You can ajust docker-compose.yml file depend on your environment.such as port , [php version](https://hub.docker.com/repository/docker/patipark/php-fpm/general)
-```bash
+```yml
 version: "3.9"
 
 services:
@@ -36,7 +36,7 @@ services:
         restart: always
         image: nginx:latest
         ports:
-            - "8080:80"
+            - "8080:80" #<<< change your port here etc .. 8088:80
         volumes:
             - ./src:/var/www/html
             - ./default.conf:/etc/nginx/conf.d/default.conf
@@ -51,15 +51,20 @@ services:
             - ./src:/var/www/html
 ```
 
+## How to run docker compose
 Run docker-compose command to start all services stack.
 ```bash
 docker-compose up -d
 ```
+After start dokcer service ,open your browser with url http://localhost:8080 or http://host-ip-address:port (your defined port)
 
+## How to down docker compose
 Run docker-compose command to shutdown all services stack.
 ```bash
 docker-compose down
 ```
+
+## How to list docker process
 Run docker command to list all service runing.
 ```bash
 docker ps 
