@@ -2,6 +2,7 @@ version: "3.9"
 
 services:
     web:
+        restart: always
         image: nginx:latest
         ports:
             - "8080:80"
@@ -12,6 +13,7 @@ services:
             - php-fpm
 
     php-fpm:
+        restart: always
         # php image url : https://hub.docker.com/repository/docker/patipark/php-fpm/general
         image: patipark/php-fpm:7.4-sqlsrv
         volumes:
