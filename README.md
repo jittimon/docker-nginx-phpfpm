@@ -59,6 +59,11 @@ docker-compose up -d
 ```
 After start dokcer service ,open your browser with url http://localhost:8080 or http://host-ip-address:port (your defined port)
 
+if you wan't to install package via composer , you can use as follow command.
+```bash
+docker-compose exec php-fpm composer require <package>
+```
+
 ## How to down docker compose
 Run docker-compose command to shutdown all services stack.
 ```bash
@@ -89,3 +94,5 @@ Run docker command to list all volumes runing.
 ```bash
 docker volume ls
 ```
+
+
