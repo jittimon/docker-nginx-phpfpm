@@ -1,4 +1,4 @@
-FROM patipark/php-fpm:7.4-sqlsrv
+FROM patipark/php-fpm:8.2
 
 # Update packages and install Composer and required packages.
 RUN apt-get update && apt-get install -y \
